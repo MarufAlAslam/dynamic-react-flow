@@ -5,10 +5,10 @@ import "../styles/style.css";
 
 // importing nodes
 import StartNodeDisplay from "../nodes/StartNode";
-import TestNodeDisplay from "../nodes/TestNode";
 import NodeDisplay from "../nodes/NodeDisplay";
 import EndNodeDisplay from "../nodes/EndNode";
 import ConditionNodeDisplay from "../nodes/ConditionNode";
+import SegmentNodeDisplay from "../nodes/SegmentNode";
 
 const registerNodes = [
   {
@@ -18,9 +18,9 @@ const registerNodes = [
     isStart: true,
   },
   {
-    type: "test",
-    name: "Testing",
-    displayComponent: TestNodeDisplay,
+    type: "segment",
+    name: "Segment",
+    displayComponent: SegmentNodeDisplay,
   },
   {
     type: "end",

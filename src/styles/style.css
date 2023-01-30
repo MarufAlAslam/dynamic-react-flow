@@ -55,3 +55,6 @@ input {
   outline: unset !important;
   box-shadow: unset !important;
 }
+.ant-select {
+  min-width: 100% !important;
+}
