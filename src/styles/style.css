@@ -47,3 +47,11 @@
 .flow-builder-content {
   background: white !important;
 }
+.ant-btn-primary {
+  background: #338aff !important;
+}
+
+input {
+  outline: unset !important;
+  box-shadow: unset !important;
+}

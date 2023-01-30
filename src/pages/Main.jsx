@@ -1,45 +1,26 @@
-import React, { useState, useContext } from "react";
-import FlowBuilder, { NodeContext } from "react-flow-builder";
+import React, { useState } from "react";
+import FlowBuilder from "react-flow-builder";
 import ConfigForm from "./ConfigForm";
 import "../styles/style.css";
-const StartNodeDisplay = () => {
-  const node = useContext(NodeContext);
-  return <div className="start-node">{node.name}</div>;
-};
-const EndNodeDisplay = () => {
-  const node = useContext(NodeContext);
-  return <div className="end-node">{node.name}</div>;
-};
-const NodeDisplay = () => {
-  const node = useContext(NodeContext);
-  return (
-    <div
-      className={`other-node ${node.configuring ? "node-configuring" : ""} ${
-        node.validateStatusError ? "node-status-error" : ""
-      }`}
-    >
-      {node.data ? node.data.name : node.name}
-    </div>
-  );
-};
-const ConditionNodeDisplay = () => {
-  const node = useContext(NodeContext);
-  return (
-    <div
-      className={`condition-node ${
-        node.configuring ? "node-configuring" : ""
-      } ${node.validateStatusError ? "node-status-error" : ""}`}
-    >
-      {node.data ? node.data.name : node.name}
-    </div>
-  );
-};
+
+// importing nodes
+import StartNodeDisplay from "../nodes/StartNode";
+import TestNodeDisplay from "../nodes/TestNode";
+import NodeDisplay from "../nodes/NodeDisplay";
+import EndNodeDisplay from "../nodes/EndNode";
+import ConditionNodeDisplay from "../nodes/ConditionNode";
+
 const registerNodes = [
   {
     type: "start",
     name: "Start",
     displayComponent: StartNodeDisplay,
     isStart: true,
+  },
+  {
+    type: "test",
+    name: "Testing",
+    displayComponent: TestNodeDisplay,
   },
   {
     type: "end",
@@ -72,6 +53,7 @@ const registerNodes = [
   },
 ];
 const defaultNodes = [];
+
 const Main = () => {
   const [nodes, setNodes] = useState(defaultNodes);
   const handleChange = (nodes) => {
