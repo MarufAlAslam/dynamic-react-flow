@@ -9,6 +9,7 @@ import NodeDisplay from "../nodes/NodeDisplay";
 import EndNodeDisplay from "../nodes/EndNode";
 import ConditionNodeDisplay from "../nodes/ConditionNode";
 import SegmentNodeDisplay from "../nodes/SegmentNode";
+import DelayNodeDisplay from "../nodes/DelayNode";
 
 const registerNodes = [
   {
@@ -21,6 +22,11 @@ const registerNodes = [
     type: "segment",
     name: "Segment",
     displayComponent: SegmentNodeDisplay,
+  },
+  {
+    type: "delay",
+    name: "Delay",
+    displayComponent: DelayNodeDisplay,
   },
   {
     type: "end",
