@@ -11,10 +11,12 @@ import ConditionNodeDisplay from "../nodes/ConditionNode";
 import SegmentNodeDisplay from "../nodes/SegmentNode";
 import DelayNodeDisplay from "../nodes/DelayNode";
 import MessageNodeDisplay from "../nodes/MessageNode";
+import CalendarNodeDisplay from "../nodes/CalendarNode";
 
 // importing icons
-import { FaUsers } from "react-icons/fa";
+import { FaUsers, FaComment, FaCalendar } from "react-icons/fa";
 import { BsClockHistory } from "react-icons/bs";
+import { TfiLoop } from "react-icons/tfi";
 
 const registerNodes = [
   {
@@ -39,6 +41,13 @@ const registerNodes = [
     type: "message",
     name: "Message",
     displayComponent: MessageNodeDisplay,
+    addIcon: <FaComment />,
+  },
+  {
+    type: "calendar",
+    name: "Calendar",
+    displayComponent: CalendarNodeDisplay,
+    addIcon: <FaCalendar />,
   },
   {
     type: "condition",
@@ -56,6 +65,8 @@ const registerNodes = [
     name: "Loop",
     displayComponent: NodeDisplay,
     isLoop: true,
+    configComponent: ConfigForm,
+    addIcon: <TfiLoop />,
   },
   {
     type: "end",

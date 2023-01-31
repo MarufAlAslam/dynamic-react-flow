@@ -46,3 +46,13 @@
 span.flow-builder-addable-node-icon {
   width: 25px;
 }
+.calendar-node {
+  width: 300px;
+}
+
+.other-node {
+  height: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
