@@ -42,13 +42,13 @@ const registerNodes = [
   },
   {
     type: "condition",
-    name: "Condition Node",
+    name: "Condition",
     displayComponent: ConditionNodeDisplay,
     configComponent: ConfigForm,
   },
   {
     type: "branch",
-    name: "Branch",
+    name: "Condition",
     conditionNodeType: "condition",
   },
   {
