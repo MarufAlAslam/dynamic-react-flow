@@ -4,7 +4,7 @@ import "./nodesStyle/Nodes.css";
 
 const DelayNode = () => {
   const handleChange = (value) => {
-    console.log(`selected ${value.value}`);
+    console.log(`delay ${value.value}`);
   };
   const selectAfter = (
     <Select defaultValue="ms">
@@ -19,7 +19,11 @@ const DelayNode = () => {
     <div className="segment-node card bg-gray-100 p-5 rounded-md">
       <h3 className="bold text-xl mb-3">Delay Amount</h3>
       <form action="">
-        <Input addonAfter={selectAfter} defaultValue="0" />
+        <Input
+          onChange={handleChange}
+          addonAfter={selectAfter}
+          defaultValue="0"
+        />
       </form>
     </div>
   );

@@ -39,3 +39,10 @@
   top: 0px;
   transform-origin: -4px 0px;
 }
+
+.message-node {
+  width: 500px;
+}
+span.flow-builder-addable-node-icon {
+  width: 25px;
+}

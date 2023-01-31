@@ -10,6 +10,11 @@ import EndNodeDisplay from "../nodes/EndNode";
 import ConditionNodeDisplay from "../nodes/ConditionNode";
 import SegmentNodeDisplay from "../nodes/SegmentNode";
 import DelayNodeDisplay from "../nodes/DelayNode";
+import MessageNodeDisplay from "../nodes/MessageNode";
+
+// importing icons
+import { FaUsers } from "react-icons/fa";
+import { BsClockHistory } from "react-icons/bs";
 
 const registerNodes = [
   {
@@ -22,23 +27,18 @@ const registerNodes = [
     type: "segment",
     name: "Segment",
     displayComponent: SegmentNodeDisplay,
+    addIcon: <FaUsers />,
   },
   {
     type: "delay",
     name: "Delay",
     displayComponent: DelayNodeDisplay,
+    addIcon: <BsClockHistory />,
   },
   {
-    type: "end",
-    name: "End",
-    displayComponent: EndNodeDisplay,
-    isEnd: true,
-  },
-  {
-    type: "node",
-    name: "Common Node",
-    displayComponent: NodeDisplay,
-    configComponent: ConfigForm,
+    type: "message",
+    name: "Message",
+    displayComponent: MessageNodeDisplay,
   },
   {
     type: "condition",
@@ -56,6 +56,12 @@ const registerNodes = [
     name: "Loop",
     displayComponent: NodeDisplay,
     isLoop: true,
+  },
+  {
+    type: "end",
+    name: "End",
+    displayComponent: EndNodeDisplay,
+    isEnd: true,
   },
 ];
 const defaultNodes = [];
